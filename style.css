@@ -33,6 +33,7 @@ html, body {
 
 .tiles-controller {
     width: 100%;
+    position: relative;
 }
 
 .tiles-controller input {
@@ -41,4 +42,19 @@ html, body {
     height: 40px;
     font-size: large;
     padding-right: 30px;
+}
+
+.tiles-controller button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+button i {
+    font-size: 16px; 
 }
