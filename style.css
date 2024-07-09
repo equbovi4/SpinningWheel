@@ -19,3 +19,26 @@ html, body {
     display: grid;
     place-items: center;
 }
+
+.tiles {
+    width: 60%; 
+    height: 60%; 
+    border: 1px solid black;
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px; 
+    box-sizing: border-box; 
+}
+
+.tiles-controller {
+    width: 100%;
+}
+
+.tiles-controller input {
+    width: 100%;
+    box-sizing: border-box; 
+    height: 40px;
+    font-size: large;
+    padding-right: 30px;
+}
