@@ -2,3 +2,20 @@ html, body {
     height: 100%;
     margin: 0;
 }
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.wheel-container, .tiles-container {
+    width: 50%;
+}
+
+.tiles-container {
+    display: grid;
+    place-items: center;
+}
