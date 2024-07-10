@@ -18,7 +18,7 @@ function addTile() {
     const tileActions = createElement("div", ["tile-actions"], {});
     tile.appendChild(tileActions);
 
-    const deleteButton = createElement("button", [], {});
+    const deleteButton = createElement("button", [], {"onclick": "deleteTile(this)"});
     const deleteIcon = createElement("i", ["fa", "fa-solid", "fa-trash"], {});
 
     deleteButton.appendChild(deleteIcon);
@@ -40,4 +40,8 @@ function createElement(elementType, elementClasses, elementAttributes) {
     };
 
     return element;
+};
+
+function deleteTile(event) {
+    event.closest(".tile").remove();
 };
