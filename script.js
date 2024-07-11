@@ -1,6 +1,18 @@
+const addTileButton = document.getElementById("add_tile_button");
+
+function enableAddTileButton() {
+    if (document.getElementById("tile-input-field").value) {
+        addTileButton.disabled = false;
+    } else {
+        addTileButton.disabled = true;
+    };
+};
+
+
 function addTile() {
     const tilesList = document.querySelector(".tiles-list");
     const tileText = document.getElementById("tile-input-field");
+
     const tile = createElement("div", ["tile"], {});
 
     tilesList.appendChild(tile);
@@ -23,8 +35,9 @@ function addTile() {
 
     deleteButton.appendChild(deleteIcon);
     tileActions.appendChild(deleteButton);
-}
 
+    addTileButton.disabled = true;
+}
 
 function createElement(elementType, elementClasses, elementAttributes) {
     const element = document.createElement(elementType);

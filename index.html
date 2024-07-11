@@ -14,8 +14,8 @@
         <div class="tiles-container">
             <div class="tiles">
                 <div class="tiles-controller">
-                    <input id="tile-input-field" type="text" placeholder="Input text here...">
-                    <button onclick="addTile()"><i class="fa fa-solid fa-plus"></i></button>
+                    <input id="tile-input-field" onkeyup="enableAddTileButton()" type="text" placeholder="Input text here...">
+                    <button id="add_tile_button" onclick="addTile()" disabled><i class="fa fa-solid fa-plus"></i></button>
                 </div>
                 <div class="tiles-list">
                     <!-- <div class="tile">
