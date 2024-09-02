@@ -17,7 +17,8 @@ function addTile() {
 
     tilesList.appendChild(tile);
 
-    const tileInput = createElement("input", [], {
+    const tileInput = createElement("input", ["tile-text"], {
+        "onkeyup": "tileTextEmpty(this)",
         "contenteditable": "true", 
         "type": "text", 
         "value": tileText.value
@@ -30,7 +31,7 @@ function addTile() {
     const tileActions = createElement("div", ["tile-actions"], {});
     tile.appendChild(tileActions);
 
-    const deleteButton = createElement("button", [], {"onclick": "deleteTile(this)"});
+    const deleteButton = createElement("button", ["delete-tile-button"], {"onclick": "deleteTile(this)"});
     const deleteIcon = createElement("i", ["fa", "fa-solid", "fa-trash"], {});
 
     deleteButton.appendChild(deleteIcon);
